@@ -1,0 +1,51 @@
+*{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial,helvetica;
+}
+body{
+	width: 100vw;
+	height: 100vh;
+	background:linear-gradient(45deg,#67B26F,#4ca2cd);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1{
+	color:white;
+	font-size:45px;
+}
+.mainBlock{
+	height:90vh;
+	width:95vw;
+	background:none;
+	border:2px solid black;
+	display:flex;
+	flex-direction:column;
+	justify-content:flex-end;
+	align-items:center;
+	overflow:hidden;
+}
+.initialBlock{
+	height:40px;
+	width:90%;
+	background-color:brown;
+}
+.secondBlock{
+	height:40px;
+	width:90%;
+	background-color:skyblue;
+	position: relative;
+	right:0px;
+	animation:InAnimation 15s linear infinite ;
+}
+.secondBlock.stop{
+	animation: none;
+}
+@keyframes InAnimation {
+	0%{right:-100%;}
+	/*25%{right:100%;}*/
+	50%{right:100%;}
+	100%{right:-100%;}
+}
